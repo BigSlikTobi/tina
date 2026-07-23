@@ -1,10 +1,9 @@
-# The Agentic Tax Practice
+# 📄 The Agentic Tax Practice (full document)
 
+# The Agentic Tax Practice
 - Status: proposed v0
 - Created: 13 July 2026
 - Owner: Product
-
-Document set: [`README.md`](README.md)
 
 ## The statement
 
@@ -45,7 +44,7 @@ We move from software that stores work to agents that perform work inside explic
 permissions and human boundaries.
 
 | Today | Agentic practice |
-| --- | --- |
+|---|---|
 | Modules wait to be opened | Work moves until it needs a human |
 | The advisor carries context | The client and workstream hold durable context |
 | Checklists describe work | Tasks can be executed and checked |
@@ -59,20 +58,17 @@ The goal is not fewer humans. The goal is to spend human judgment where it matte
 ## Who this serves
 
 "Customer" is too vague for this product. We have distinct actors:
-
 - **Buyer**: the tax advisory firm or practice owner.
 - **Daily user**: the advisor, tax specialist, bookkeeper, or operations staff member.
 - **Accountable signer**: the licensed professional who owns the final judgment.
 - **End client**: the person or business receiving the service and providing data.
-- **Administrator**: the person who controls staff access, agents, policy, skills, and
-  integrations.
+- **Administrator**: the person who controls staff access, agents, policy, skills, and integrations.
 
 One person may hold several roles. The product must never blur their authority.
 
 ### First market
 
 The first end-client targets are:
-
 - self-employed people and freelancers;
 - small and medium-sized businesses.
 
@@ -84,7 +80,7 @@ business work where missing inputs, reconciliation gaps, and advisory needs appe
 
 The business hierarchy is:
 
-```text
+```
 Organization
 └── Client
     └── Engagement
@@ -95,7 +91,7 @@ Organization
 
 Execution and evidence have their own graphs:
 
-```text
+```
 Task → Result reference → Run result ← Run
 Run → attempts, events, and actions
 Run result → artifacts and execution record
@@ -106,31 +102,23 @@ Evidence link → workstream, obligation, or task
 
 - A **Client** is a person or company. A client is not a case.
 - An **Engagement** is the commercial mandate and service scope.
-- A **Workstream** is one body of work with a type and period. For tax work, the UI
-  may call it a **Case**.
+- A **Workstream** is one body of work with a type and period. For tax work, the UI may call it a **Case**.
 - A **Task** is one bounded unit a human or agent can own.
-- A **Run** is one durable execution request. It may have several worker attempts and
-  can stop, resume, fail, or finish.
+- A **Run** is one durable execution request. It may have several worker attempts and can stop, resume, fail, or finish.
 - **Evidence** connects source material to a claim, task, or result.
-- An **execution record** shows the inputs, actions, outputs, and human review state.
-  It supports inspection. It is not a production seal and does not prove that the tax
-  conclusion is correct.
+- An **execution record** shows the inputs, actions, outputs, and human review state. It supports inspection. It is not a production seal and does not prove that the tax conclusion is correct.
 
-Documents, evidence, requests, messages, and decisions have explicit scopes. Client
-conversations belong to the engagement, optionally with workstream context. Colleague
-conversations may belong to the organization.
+Documents, evidence, requests, messages, and decisions have explicit scopes. Client conversations belong to the engagement, optionally with workstream context. Colleague conversations may belong to the organization.
 
 ## The product surfaces
 
 The proposed future navigation model is small:
-
 - **Today**: one prioritized stream of exceptions and approvals that need a human.
 - **Clients**: the advisor's book and each client's durable workspace.
 - **Work**: all active workstreams and their state across the practice.
 - **Practice health**: team, agents, policy, knowledge, capabilities, integrations, and metrics.
 
 Inside a client:
-
 - Overview
 - Engagements and workstreams
 - Documents and evidence
@@ -140,39 +128,18 @@ Inside a client:
 - Decisions and history
 
 Inside a workstream:
-
 - **Overview**: goal, scope, inputs, current state, and people.
 - **Work**: plan, tasks, runs, blockers, and human checkpoints.
 - **Trace**: evidence, actions, checks, decisions, and changes.
 - **Outcome**: result, approval state, unresolved items, and execution record.
 
 Inside the first bookkeeping workstream, the MVP uses Case → Prepare → Trace → Outcome.
-A formal Seal may be added after the MVP as part of Plan → Act → Check → Seal. That is not
-an MVP condition and is not a fit for every workstream type.
-
-Modules can exist behind these surfaces. They do not define the main navigation.
-Jobs and objects do.
-
-This vocabulary maps to the existing IA like this:
-
-| Proposed name | Existing name | Meaning |
-| --- | --- | --- |
-| Today | Today / Needs me | Prioritized exceptions and approvals |
-| Clients | The Book | Durable client workspaces |
-| Work | Cases | Global workstream queue |
-| Practice health | Practice health | Team, agents, policy, capabilities, and metrics |
-
-The Advisor Desk and Expert Desk remain role-specific views over the same records. The
-table above sets the future product direction; it is not a claim that the current Flutter
-navigation already matches it. The current product remains split into Advisor Desk and
-Expert Desk until the role and handover model is deliberately changed.
 
 ## What we take from Codex
 
 Codex is an interaction reference, not a tax-product information architecture.
 
 We take:
-
 - a clear place for every body of work;
 - scoped conversations attached to that work;
 - visible plans, tasks, progress, and artifacts;
@@ -181,14 +148,11 @@ We take:
 - a history that lets the user understand what changed;
 - many active workstreams without losing their separate context.
 
-We do not copy a developer terminal, a repository metaphor, or private chain-of-thought.
-Tax advisors need clients, mandates, workstreams, evidence, decisions, and deadlines.
-The interaction should feel alive like Codex. The domain model must stay tax-native.
+We do not copy a developer terminal, a repository metaphor, or private chain-of-thought. Tax advisors need clients, mandates, workstreams, evidence, decisions, and deadlines. The interaction should feel alive like Codex. The domain model must stay tax-native.
 
 ## What "agentic" means
 
 A workflow is agentic only when the system can:
-
 1. Take a goal and relevant context.
 2. Build or adapt a multi-step plan.
 3. Use approved tools to perform real work and advance state.
@@ -197,8 +161,7 @@ A workflow is agentic only when the system can:
 6. Resume from durable state without rebuilding the case from scratch.
 7. Leave an inspectable record of evidence, actions, checks, and decisions.
 
-A chat box, summary, extraction result, dashboard, or generated draft can be useful.
-None of them is agentic by itself.
+A chat box, summary, extraction result, dashboard, or generated draft can be useful. None of them is agentic by itself.
 
 ### Autonomy ladder
 
@@ -208,17 +171,13 @@ None of them is agentic by itself.
 - **L3 — Execute after approval**: perform an action once a named human approves.
 - **L4 — Execute inside policy**: continue autonomously and escalate exceptions.
 
-The first state targets L2 for one bounded preparation-and-review job. It ends when
-the advisor accepts or returns the review package. L3 is allowed only for reversible,
-explicitly approved actions. Legal judgment and irreversible external actions do not
-become L4 merely because a model performs well.
+The first state targets L2 for one bounded preparation-and-review job. It ends when the advisor accepts or returns the review package. L3 is allowed only for reversible, explicitly approved actions. Legal judgment and irreversible external actions do not become L4 merely because a model performs well.
 
 ## The new advisor role
 
 The advisor should not spend the day moving data and polling status.
 
 The advisor:
-
 - sets the goal and policy;
 - owns the client relationship;
 - resolves unclear facts and conflicting evidence;
@@ -227,16 +186,13 @@ The advisor:
 - approves irreversible or regulated actions;
 - reviews exceptions and improves the system from real failures.
 
-The product should bring the next important exception to the advisor. The advisor
-should not patrol nine modules to discover it.
+The product should bring the next important exception to the advisor. The advisor should not patrol nine modules to discover it.
 
 ## Client value and growth
 
-The product should not only finish the current tax job. It should help the advisor see
-what the client needs next.
+The product should not only finish the current tax job. It should help the advisor see what the client needs next.
 
 Examples include:
-
 - missing service coverage;
 - tax-planning opportunities;
 - bookkeeping cleanup or recurring bookkeeping needs;
@@ -244,17 +200,13 @@ Examples include:
 - missing compliance work;
 - another Taxfix product or advisory service that solves an evidenced client need.
 
-Each opportunity must show the evidence, the observed gap, why it matters, the client
-benefit, the suggested next product or service, and what is still uncertain. The advisor
-accepts, dismisses, or develops it into a client conversation. The product never contacts
-the client or makes a sales promise automatically.
+Each opportunity must show the evidence, the observed gap, why it matters, the client benefit, the suggested next product or service, and what is still uncertain. The advisor accepts, dismisses, or develops it into a client conversation. The product never contacts the client or makes a sales promise automatically.
 
 The commercial outcome may be an upsell. The trigger must be a real client need.
 
 ## The MVP operating contract
 
 The MVP keeps trust simple:
-
 - explicit tool and capability permissions;
 - durable tasks, runs, and execution history;
 - source-linked outputs;
@@ -262,13 +214,9 @@ The MVP keeps trust simple:
 - a human acceptance rubric;
 - no automatic client outreach or irreversible external action.
 
-A model-selected clean disposition does not make work advisor-ready. Human acceptance
-does. The MVP may use focused deterministic checks where they are cheap and useful, but it
-does not require a formal governance kernel or production seal.
+A model-selected clean disposition does not make work advisor-ready. Human acceptance does. The MVP may use focused deterministic checks where they are cheap and useful, but it does not require a formal governance kernel or production seal.
 
-After the MVP proves the workflow, formal Plan → Act → Check → Seal can harden the
-execution path. That later phase can add required checks, default-deny enforcement,
-tamper-evident sealing, and stronger audit claims. It is not part of the MVP scope.
+After the MVP proves the workflow, formal Plan → Act → Check → Seal can harden the execution path. That later phase can add required checks, default-deny enforcement, tamper-evident sealing, and stronger audit claims. It is not part of the MVP scope.
 
 ## Product principles
 
@@ -292,8 +240,7 @@ tamper-evident sealing, and stronger audit claims. It is not part of the MVP sco
 - Automatic client messages, filings, payments, or other external actions without authority.
 - A second maintained "SOTA app" beside the agentic product. SOTA is a benchmark and reference, not another product line.
 - Runs, messages, tool calls, or tokens used as success metrics.
-- Private chain-of-thought presented as audit evidence. We show sources, actions, checks,
-  decisions, and stated reasons.
+- Private chain-of-thought presented as audit evidence. We show sources, actions, checks, decisions, and stated reasons.
 - Production-grade governance or sealing claims in the MVP.
 - Generic platform work before one real workflow works.
 
@@ -301,25 +248,15 @@ tamper-evident sealing, and stronger audit claims. It is not part of the MVP sco
 
 ### Product promise
 
-An advisor initiates a business bookkeeping workstream. A Tax Expert supervises agentic
-preparation and hands over a typed, evidence-linked review package. The system finds
-missing input, drafts the request, and stops at explicit judgment or authority boundaries.
-The advisor accepts or returns the package and can inspect how it was produced. The same
-evidence can surface client gaps and product or advisory opportunities for the advisor to
-review.
+An advisor initiates a business bookkeeping workstream. A Tax Expert supervises agentic preparation and hands over a typed, evidence-linked review package. The system finds missing input, drafts the request, and stops at explicit judgment or authority boundaries. The advisor accepts or returns the package and can inspect how it was produced. The same evidence can surface client gaps and product or advisory opportunities for the advisor to review.
 
 ### Deep wedge
 
-**Hypothesis:** start by preparing one bookkeeping period for advisor review for a
-self-employed person or SME.
+**Hypothesis:** start by preparing one bookkeeping period for advisor review for a self-employed person or SME.
 
-Start when the client, engagement, bookkeeping workstream, and period exist. The input
-contract should cover the available bank export, incoming invoices, outgoing invoices,
-open items, ledger data, and supporting evidence. End when the advisor accepts or returns
-the review package.
+Start when the client, engagement, bookkeeping workstream, and period exist. The input contract should cover the available bank export, incoming invoices, outgoing invoices, open items, ledger data, and supporting evidence. End when the advisor accepts or returns the review package.
 
 The package should:
-
 - reconcile transactions and invoices where the evidence supports a match;
 - show unmatched transactions, missing receipts, and unclear payments;
 - expose Debitoren and Kreditoren gaps;
@@ -327,15 +264,10 @@ The package should:
 - draft client questions without sending them;
 - surface evidence-backed client needs and advisory or product opportunities.
 
-Use versioned synthetic CSV and text fixtures for the first happy path. Unsupported files
-must create a visible capability stop. Do not force fake opportunities into the fixture.
-Pilot data should include realistic needs such as recurring bookkeeping, cleanup,
-liquidity support, overdue receivables, VAT or compliance work, tax planning, or
-e-invoicing setup.
+Use versioned synthetic CSV and text fixtures for the first happy path. Unsupported files must create a visible capability stop.
 
 ### In scope
 
-- Use and harden the current Advisor Desk, Expert Desk, client, and workstream shell.
 - Safe intake and document inventory for one defined bookkeeping period.
 - Approved extraction for the synthetic CSV and text path.
 - Bank, invoice, open-item, and ledger completeness checks.
@@ -370,65 +302,17 @@ e-invoicing setup.
 - A broad agent marketplace.
 - A generic no-code workflow builder.
 
-No real client data may reach any model in the first state. Moving beyond synthetic data
-requires an explicit decision that supersedes the current migration contract, plus
-authentication, tenant isolation, provider and data-processing approval, residency,
-retention, deletion, redacted logging, and an enforced data-class egress gate. Security
-and privacy owners must approve it.
-
-### Honest capability gate
-
-The supported deterministic generator is `csv_reader`. Legacy Word and PDF packages may
-exist on disk, but disk presence is not product support. The v2 runtime may load a package
-only when the tenant registry marks the exact approved hash active. The legacy PDF tool
-does not extract body text, and the Word tool rejects `.doc`.
-
-An unsupported file must stop loudly. A future mixed-document happy path requires
-validated, human-approved readers. The first fixture must prove the supported CSV and
-text path and must not imply that PDF, Word, image, or spreadsheet parsing works.
+No real client data may reach any model in the first state. Moving beyond synthetic data requires an explicit decision that supersedes the current migration contract, plus authentication, tenant isolation, provider and data-processing approval, residency, retention, deletion, redacted logging, and an enforced data-class egress gate. Security and privacy owners must approve it.
 
 ## How we judge progress
 
 The proposed north-star metric is:
 
-> Percentage of eligible bookkeeping periods that reach an evidence-complete,
-> advisor-ready state within the target time and without a material correction.
+> Percentage of eligible bookkeeping periods that reach an evidence-complete, advisor-ready state within the target time and without a material correction.
 
-Supporting measures:
+Supporting measures: advisor acceptance rate; advisor hands-on minutes per accepted bookkeeping period; total cycle time and waiting time; result accuracy against a double-reviewed gold set; missed material bookkeeping-issue rate; material corrections and rework; missed-document and missed-question rate; false review-point rate; evidence coverage; human intervention and override rate, by reason; model and tool cost per accepted package; silent or fake unsupported parsing, with a target of zero; unauthorized external actions, with a target of zero; unsupported-format encounter rate; repeat use by advisors; eligible bookkeeping periods handled through the system; accepted bookkeeping periods per advisor; top blocker and capability-gap reasons.
 
-- advisor acceptance rate;
-- advisor hands-on minutes per accepted bookkeeping period;
-- total cycle time and waiting time;
-- result accuracy against a double-reviewed gold set;
-- missed material bookkeeping-issue rate;
-- material corrections and rework;
-- missed-document and missed-question rate;
-- false review-point rate;
-- evidence coverage;
-- human intervention and override rate, by reason;
-- model and tool cost per accepted package;
-- silent or fake unsupported parsing, with a target of zero;
-- unauthorized external actions, with a target of zero;
-- unsupported-format encounter rate, measured as a capability signal rather than hidden;
-- repeat use by advisors;
-- eligible bookkeeping periods handled through the system;
-- accepted bookkeeping periods per advisor;
-- top blocker and capability-gap reasons.
-
-Opportunity measures:
-
-- opportunities surfaced per eligible client;
-- advisor acceptance and dismissal rate, with reason;
-- accepted opportunity → client conversation rate;
-- conversation → product or service conversion rate;
-- attributed revenue and gross margin;
-- false or low-value opportunity rate;
-- client complaint or trust-impact rate.
-
-Before this metric is used, the dossier must define eligibility before the run, the
-advisor-ready acceptance rubric, a material correction, the SLA clock, and the correction
-observation window. Baselines and numeric thresholds must be set before a real pilot. We
-do not invent them from a desk.
+Baselines and numeric thresholds must be set before a real pilot. We do not invent them from a desk.
 
 ## Open decisions
 

@@ -1,23 +1,24 @@
-# How We Reached the War-Game Decision — Advisor Morning and First Bookkeeping Period
+# 🧠 War game (thought process)
 
+# How We Reached the War-Game Decision — Advisor Morning and First Bookkeeping Period
 - Artifact ID: ADV-MORNING-001-WAR-P001
 - Artifact type: reader-facing-decision-summary
 - Version: 2.1
 - Artifact completeness: complete
 - Job ID: ADV-MORNING-001
-- War-game mode: design-simulation (rerun with company evidence; corrected by Product)
+- War-game mode: design-simulation (v2.0 rerun with company evidence; v2.1 Product corrections)
 - Canonical lifecycle stage: discovery
 - Capability mode: mixed
 - Evaluation mode: design simulation; v2.0 re-adjudicated against the real SE-DIFM evidence; v2.1 records Product's decisions
 - Requested transition: discovery to build under ADV-MORNING-001-MET-G001
 - Gate decision: hold
-- Decision consequence: narrow
+- Decision consequence: narrow (vendor-agnostic MVP as specified; no kill shot)
 - Owner: Product / Execution Safety; named DRI Open
 - Updated date: 2026-07-21
-- Canonical brief: Open — [JTBD portfolio](../../jtbd/README.md)
-- Result artifact: [war-game report](war_game.md)
-- Source transcript: [sanitized transcript](war_game_agent_transcript.md)
-- Companion decision record: [agentic_mvp_decision.md](agentic_mvp_decision.md)
+- Canonical brief: Open — JTBD portfolio
+- Result artifact: war-game report (war_game.md)
+- Source transcript: sanitized transcript (war_game_agent_transcript.md)
+- Companion decision record: agentic_mvp_decision.md
 
 ## What this document is
 
@@ -25,23 +26,23 @@ This is the stand-alone story of the v2.x war-game rerun: why we ran it again, w
 
 ## The result in one minute
 
-We first ran this war game as a greenfield thought experiment and said "hold, then narrow." Then we pulled the real internal SE-DIFM strategy from Notion — a numbered requirements spec, a committed integration surface (a bookkeeping engine, a bank connector, DATEV/ELSTER), a named team, and a single tax advisor who signs the filings by hand at launch. We reran the same attacks against that reality. The rerun threw two dramatic kill shots — "you're really building on a specific vendor stack, not greenfield" and "the model config sends data to a non-EU provider." Product overruled both, correctly: the MVP is **vendor-agnostic**, built against clean APIs, so naming a vendor in strategy is not lock-in; and the current prototype's model config is **out of the decision matrix** — we build from the docs, not the prototype. Once those two are set aside, the rerun's real value is plain: it confirmed the MVP's structure and sharpened its open questions with concrete evidence, and it named three genuine prerequisites for going live (filing authority, a security owner, reviewer failover) that were always meant to sit at later gates. No kill shot survives. The decision stays **hold → narrow**, and we build the MVP as specified. The full plan is in the [decision record](agentic_mvp_decision.md).
+We first ran this war game as a greenfield thought experiment and said "hold, then narrow." Then we pulled the real internal SE-DIFM strategy from Notion — a numbered requirements spec, a committed integration surface (a bookkeeping engine, a bank connector, DATEV/ELSTER), a named team, and a single tax advisor who signs the filings by hand at launch. We reran the same attacks against that reality. The rerun threw two dramatic kill shots — "you're really building on a specific vendor stack, not greenfield" and "the model config sends data to a non-EU provider." Product overruled both, correctly: the MVP is **vendor-agnostic**, built against clean APIs, so naming a vendor in strategy is not lock-in; and the current prototype's model config is **out of the decision matrix** — we build from the docs, not the prototype. Once those two are set aside, the rerun's real value is plain: it confirmed the MVP's structure and sharpened its open questions with concrete evidence, and it named three genuine prerequisites for going live (filing authority, a security owner, reviewer failover) that were always meant to sit at later gates. No kill shot survives. The decision stays **hold → narrow**, and we build the MVP as specified. The full plan is in the decision record (agentic_mvp_decision.md).
 
 ## The journey
 
 ```mermaid
 flowchart LR
-    A["Vendor-agnostic MVP\n(APIs + adapters)"] --> B["Rerun vs real\nSE-DIFM evidence"]
-    B --> C["2 kill shots overruled\nby Product"]
-    C --> D["Sharpened open questions +\ndesign requirements"]
-    D --> E["HOLD -> NARROW\nbuild the MVP as specified"]
+    A["Vendor-agnostic MVP<br>(APIs + adapters)"] --> B["Rerun vs real<br>SE-DIFM evidence"]
+    B --> C["2 kill shots overruled<br>by Product"]
+    C --> D["Sharpened open questions +<br>design requirements"]
+    D --> E["HOLD -> NARROW<br>build the MVP as specified"]
 ```
 
 ## Where we started
 
 The v1.0 war game tested the MVP as a greenfield design against itself. It kept the full-day workbench and the one deep bookkeeping job in scope and left one kill shot open: a full-day desk that becomes a second place to maintain work. That was plausible but unproven, so we held.
 
-What we did not have then was the company's real plan. We have it now: the SE-DIFM product is being specified against a bookkeeping engine (GFR.ai), a bank connector (FinAPI), and DATEV/ELSTER, with a named team and a licensed tax advisor, Suat Göydeniz of TaxVentures, signing the filings by hand for the first 50 to 100 clients. The user asked us to bring that evidence in — so we did.
+What we did not have then was the company's real plan. We have it now: the SE-DIFM product is being specified against a bookkeeping engine (GFR.ai), a bank connector (FinAPI), and DATEV/ELSTER, with a named team and a licensed tax advisor, Suat Göydeniz of TaxVentures, signing the filings by hand for the first 50 to 100 clients. The user asked us to bring that evidence in, so we did.
 
 ## What changed and why
 
@@ -60,7 +61,7 @@ What we did not have then was the company's real plan. We have it now: the SE-DI
 ## The choices that shaped the result
 
 | Choice | Real options | Why we chose this | What we gave up |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | Vendor stance | Hard-couple to the named systems, or build vendor-agnostic behind adapters | Adapters let us integrate now and swap later; no lock-in | Some short-term simplicity of a direct integration |
 | The prototype | Judge the MVP by the current code, or exclude it | We build from the docs, not the prototype | The false comfort of "the code already does X/Y" |
 | Execution layer | Re-implement bookkeeping, or govern and verify the engine's output | Governance adds value without duplicating or hallucinating | A flashier "the agent does the bookkeeping" story |
@@ -71,7 +72,7 @@ What we did not have then was the company's real plan. We have it now: the SE-DI
 
 Two scenarios survived on their merits: mandatory four-eyes sign-off is a legal requirement no model dissolves, and the prototype is out of scope. Most scenarios are documented but unproven. Eight failed, and every one maps to a known open question — claim discipline, cost/metrics binding, reviewer capacity at scale, and one controlled-live integration prerequisite.
 
-The decision is hold → narrow, for the vendor-agnostic MVP as specified. We keep the two-layer product shape, human authority, and the vendor-neutral handoff (now realized through adapters). We build against clean APIs, govern the engine rather than duplicating it, and prove the whole thing on synthetic data first. The build-ready Phase-1 scope, the ten decisions with their rationale, and the "failing is OK" bets are in the [decision record](agentic_mvp_decision.md).
+The decision is hold → narrow, for the vendor-agnostic MVP as specified. We keep the two-layer product shape, human authority, and the vendor-neutral handoff (now realized through adapters). We build against clean APIs, govern the engine rather than duplicating it, and prove the whole thing on synthetic data first. The build-ready Phase-1 scope, the ten decisions with their rationale, and the "failing is OK" bets are in the decision record (agentic_mvp_decision.md).
 
 ## What is still open
 

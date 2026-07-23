@@ -1,12 +1,12 @@
-# From SOTA to Codex for Tax Advisors
+# 🪴 SOTA to Codex: the product direction
 
+# From SOTA to Codex for Tax Advisors
 - Status: current direction
 - Owner: Product
 - Updated: 2026-07-17
 - Scope: Advisor Desk and the first SE-DIFM bookkeeping job
-- SOTA source: [The Current SOTA Advisor Desk](SOTA/sota_advisor_desk.md)
-- Product vision: [Agentic Product Roadmap](product_vision.md)
-- Live mock: [Codex for Tax Advisors](https://taxfix-codex-ta-platform.bigsliktobi.chatgpt.site)
+- SOTA source: The Current SOTA Advisor Desk (sota_advisor_desk.md)
+- Product vision: Agentic Product Roadmap (product_vision.md)
 
 ## The decision
 
@@ -46,7 +46,7 @@ It is not the first product promise.
 
 The first product promise is smaller:
 
-```text
+```
 One eligible SE-DIFM bookkeeping period
 -> evidence-linked preparation
 -> Advisor accept or return
@@ -69,7 +69,7 @@ The Advisor is still the workflow engine.
 
 This is the jump the vision must make:
 
-```text
+```
 SOTA Desk
 understands and organizes work
 
@@ -99,7 +99,7 @@ The work resumes from the recorded state.
 
 The loop is:
 
-```text
+```
 Mission -> Plan -> Work -> Trace -> Review -> Resume
 ```
 
@@ -152,7 +152,7 @@ At every step, the Advisor can inspect, correct, reject, pause, or take over.
 These are relative operating months. They are not calendar promises.
 
 | Month | What the Advisor wants to do | What changes in the product | What stays with the Advisor |
-| --- | --- | --- | --- |
+|---|---|---|---|
 | Entry gate | Start with real work and a real cohort | Verify the workspace, eligible cases, named Advisors, and baseline | Decide whether the operating plan can start |
 | 1 | Know what needs attention and move one case forward | SOTA Desk plus one mission, short plan, bounded run, and Trace | Start or edit the run. Review the result |
 | 2 | Finish one bookkeeping period without rebuilding context | Complete the supported preparation and record the manual DATEV handoff | Accept or return. Complete the external handoff |
@@ -197,7 +197,7 @@ A stronger model never grants itself more authority.
 ## The product artifacts that change
 
 | Artifact | What it becomes |
-| --- | --- |
+|---|---|
 | Client workspace | The durable home for the client, mandate, evidence, communication, and history |
 | Workstream or case | One defined body of work with a period, scope, goal, and accepted end state |
 | Mission | The outcome the Advisor asks the platform to prepare |
@@ -211,9 +211,7 @@ A stronger model never grants itself more authority.
 | Handoff | The controlled move into DATEV or another external system, manual first |
 | Metrics and gates | Quality and trust first, handling time second, business value after that |
 
-The artifacts tell one story.
-
-Chat, tasks, evidence, review, and state cannot disagree about what happened.
+The artifacts tell one story. Chat, tasks, evidence, review, and state cannot disagree about what happened.
 
 ## The final Month 9 state
 
@@ -242,7 +240,6 @@ It is not an autonomous tax practice.
 It is the operating system for agentic Tax Advisory, with the Advisor still accountable.
 
 ## What is decided
-
 - The product is the TA Platform.
 - Advisor Desk is its workbench.
 - Codex for Tax Advisors is the north-star experience.
@@ -256,18 +253,14 @@ It is the operating system for agentic Tax Advisory, with the Advisor still acco
 - PACS and formal sealing are not part of this plan.
 
 ## What we still assume
-
 - One deep job will create reusable context, permission, review, and recovery patterns.
 - Advisors will accept a gradual transfer from visible assistance to proven default preparation.
 - One mission and one Trace can hide specialist complexity without hiding material facts.
 - Model progress will improve the pace, coverage, and economics of the plan.
 
-These are working assumptions.
-
-They are not proof.
+These are working assumptions. They are not proof.
 
 ## What remains open
-
 - Who owns the Month 1 entry gate?
 - How many eligible cases are enough to start?
 - Which named Advisors join the first cohort?
@@ -278,23 +271,14 @@ They are not proof.
 - What threshold lets an opportunity signal leave shadow mode?
 - Which agent family earns the next investment after the first job?
 
-## Revisit this direction when
-
-- direct Advisor observation changes the job;
-- the first bookkeeping evaluation fails its quality or trust gate;
-- handling time does not improve;
-- the entry cohort is not available;
-- a frontier capability passes or fails the job-specific proof;
-- the sanctioned integration path changes;
-- opportunity signals create noise or weak client value; or
-- a new company decision changes the TA Platform strategy.
-
 ## What happens next
 
-Use the [live Codex mock](https://taxfix-codex-ta-platform.bigsliktobi.chatgpt.site) with real internal Advisors.
+Use the live Codex mock with real internal Advisors.
 
 Test one simple question:
 
 > Can an Advisor understand the mission, trust the Trace, make the review decision, and know what happens next?
 
 Then define the first bookkeeping evaluation pack and the Month 1 entry record.
+
+- [SOTA to Codex: thought process](https://app.notion.com/p/3a639357d84781ffa4f5f2eaa143f620)
