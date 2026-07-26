@@ -1,21 +1,17 @@
 # TA Platform Strategy
 
 - Status: Proposed
-- Decision owner: Product and business leadership
+- Decision owner: Product
 - Updated: 2026-07-26
 - Freshness: Current
 - Confidence: Medium
-- Direct source: [Leadership input from 2026-07-26](./Raw/leadership_ta_platform_direction_2026-07-26.md)
-- Cross-check: [Decisions cross-checked against Notion](./ta_platform_decisions_notion_crosscheck.md)
 - Revisit trigger: Strategy approval, target definition, or legal operating model changes
 
 ## Strategy
 
 Taxfix builds the operating system and marketplace for tax professionals.
-
 Qualified professionals can join the network, work Taxfix cases or bring their own clients, and complete tax work with shared tools, context, and controls.
-
-The professional workspace offers a Codex experience for Tax Advisors.
+The professional workspace offers an agentic experience for Tax Advisors.
 
 ## Product model
 
@@ -27,13 +23,9 @@ The professional workspace offers a Codex experience for Tax Advisors.
 | Marketplace | Routes cases and tasks by qualification, permission, capacity, and responsibility |
 | Talent foundation | Registration, verification, qualifications, training, contracts, practice membership, and payouts |
 
-The layers depend on each other.
-
-The workbench without TalentOps and the marketplace becomes an internal tool. The marketplace without the workbench becomes a staffing marketplace with weak delivery control.
-
 ## Work experience
 
-The workspace offers a Codex experience for tax work.
+The workspace offers an agentic experience for tax work.
 
 It shows:
 
@@ -155,10 +147,7 @@ Guardrails:
 Each item below carries a status from the Notion cross-check. Still open means no Notion source answers it. Details and sources are in [ta_platform_decisions_notion_crosscheck.md](./ta_platform_decisions_notion_crosscheck.md).
 
 1. **TA-count definition.** Which milestone counts as one of the 200 TAs: registered, verified, contracted, qualified, activated, or first paid case? **Still open.** No stage taxonomy exists in Notion.
-2. **Target dates for 200 and 1,000.** When do we reach 200 TAs and when do we reach 1,000, and does either date match the "1,000+ in Year 1" slide? **Answered, and it contradicts the slide.** Internal plans put 100 to 300 TAs live by EOY 2026 and 1,000 by EOY 2027, with white-label starting Q1 2027. Nothing in Notion supports "1,000+ in Year 1." Confirm with leadership what "Year 1" means.
-3. **CaseOps and TalentOps sequencing and ownership.** Do CaseOps and TalentOps run on the same timeline, and who owns each track? **Partially answered.** CaseOps items are in delivery for Q3 2026. TalentOps (the Marketplace MVP: register, qualify, train, quality-check) is in discovery for Q4 2026, one quarter behind. Product owner is Tobias Latta. No named owner exists for TalentOps beyond that.
-4. **Monitor as the B2C delivery system.** Is Monitor the system Tax Advisors will use to deliver B2C cases? **Answered: yes.** Two active H2 2026 initiatives name Monitor directly as the B2C Tax Advisor Platform.
-5. **Role permissions for tax work.** Which roles are allowed to prepare, review, and hold liability for each type of tax work? **Partially answered.** A two-tier split exists: TA owner (Berufsträger) carries liability, does QA, and gives final approval; TA staff (Sachbearbeiter) prepares cases, with a four-eyes check before filing. Nothing defines where freelancers or Minijobber roles fit.
-6. **Cross-practice case handling.** Can one case be handled by more than one practice, and under what mandate, liability, and data-access rules? **Answered: not today.** Each case binds to a single providerID at assignment. There is currently no way to even reassign a case to a different advisor through Monitor, let alone split it across practices.
-7. **Contract, pricing, and payout model.** How do contracts, pricing, and payouts work for a case Taxfix assigns to a TA versus a client the TA brings themselves? **Answered as a live risk.** Monitor does not yet reflect the process in the updated T&Cs and TA contracts, a flagged legal and operational risk. Payment timing for routed cases is still being decided. Payout mechanics for a TA's own, white-label clients don't exist yet. Advisor-facing billing is scoped for 2027.
-8. **White-label timing.** Does white-label need to launch before 200 TAs are reached, or only later while scaling toward 1,000? **Answered: no, not before 200.** White-label starts Q1 2027, alongside the climb toward 1,000.
+2. **Role permissions for tax work.** Which roles are allowed to prepare, review, and hold liability for each type of tax work? **Partially answered.** A two-tier split exists: TA owner (Berufsträger) carries liability, does QA, and gives final approval; TA staff (Sachbearbeiter) prepares cases, with a four-eyes check before filing. Nothing defines where freelancers or Minijobber roles fit.
+3. **Cross-practice case handling.** Can one case be handled by more than one practice, and under what mandate, liability, and data-access rules? **Answered: not today.** Each case binds to a single providerID at assignment. There is currently no way to even reassign a case to a different advisor through Monitor, let alone split it across practices.
+4. **Contract, pricing, and payout model.** How do contracts, pricing, and payouts work for a case Taxfix assigns to a TA versus a client the TA brings themselves? **Answered as a live risk.** Monitor does not yet reflect the process in the updated T&Cs and TA contracts, a flagged legal and operational risk. Payment timing for routed cases is still being decided. Payout mechanics for a TA's own, white-label clients don't exist yet. Advisor-facing billing is scoped for 2027.
+5. **White-label timing.** Does white-label need to launch before 200 TAs are reached, or only later while scaling toward 1,000? **Answered: no, not before 200.** White-label starts Q1 2027, alongside the climb toward 1,000.

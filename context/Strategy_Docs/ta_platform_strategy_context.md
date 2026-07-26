@@ -5,7 +5,6 @@
 - Updated: 2026-07-26
 - Freshness: Current
 - Confidence: Medium
-- Direct source: [Leadership input from 2026-07-26](./Raw/leadership_ta_platform_direction_2026-07-26.md)
 - Strategy draft: [TA Platform Strategy](./ta_platform_canonical_strategy.md)
 
 ## Purpose
