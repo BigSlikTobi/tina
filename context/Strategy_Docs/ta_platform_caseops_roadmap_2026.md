@@ -1,12 +1,11 @@
 # CaseOps Roadmap: to EOY 2026
 
-- Status: Draft, built from existing Notion planning docs. Not yet an approved roadmap.
-- Owner: Product (Tobias Latta). Engineering Manager, Design, Tax Experts, Engineering, Data, and Research are not yet staffed on this track.
+- Status: Draft.
+- Owner: Product (Tobias Latta).
 - Updated: 2026-07-26
 - Freshness: Current
-- Confidence: Medium. Milestones come from H2 2026 planning docs dated between April and July 2026.
-- Parent: [TA Platform Strategy](./ta_platform_canonical_strategy.md)
-- Sources: TA Platform — H2 Initiative List (Notion, 2026-06-29), Strategy alignment: vision ↔ internal strategy (Notion, 2026-07-17), TA Platform Strategy Rundown V0.3 (Notion, 2026-06-27)
+- Confidence: Medium. 
+- Parent: [TA Platform Strategy](./ta_platform_strategy.md)
 
 ## Scope
 

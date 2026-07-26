@@ -5,7 +5,7 @@
 - Updated: 2026-07-26
 - Freshness: Current
 - Confidence: Medium
-- Strategy draft: [TA Platform Strategy](./ta_platform_canonical_strategy.md)
+- Strategy draft: [TA Platform Strategy](./ta_platform_strategy.md)
 
 ## Purpose
 

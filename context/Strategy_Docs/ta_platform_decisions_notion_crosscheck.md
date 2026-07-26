@@ -5,8 +5,8 @@
 - Updated: 2026-07-26
 - Freshness: Current
 - Confidence: Medium. Sourced from dated Notion pages, not from a single approved plan.
-- Strategy draft: [TA Platform Strategy](./ta_platform_canonical_strategy.md)
-- Purpose: Check each of the 8 open decisions in the canonical strategy against what Notion actually says, and flag contradictions.
+- Strategy draft: [TA Platform Strategy](./ta_platform_strategy.md)
+- Purpose: Check each of the 8 open decisions in the strategy against what Notion actually says, and flag contradictions.
 
 ## 1. TA-count definition: which milestone counts as one of the 200 TAs
 

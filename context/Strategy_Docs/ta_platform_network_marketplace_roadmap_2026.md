@@ -28,7 +28,4 @@ Everything else in this track is 2027 and 2028:
 - "B2C White-Label Partnerships (VLH & TA Network)" is tagged "when it helps: 2027."
 - The concrete 2026-to-2027 delivery plan places the first white-label Kanzleien at Q1 2027, and 1,000 TAs live at EOY 2027.
 
-## Open items from the canonical strategy
-
-- Decision 8, white-label timing: answered. White-label is not needed before 200 TAs. It starts after the 2026 push, alongside the climb to 1,000.
 
