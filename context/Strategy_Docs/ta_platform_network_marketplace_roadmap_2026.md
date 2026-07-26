@@ -14,13 +14,19 @@ Grow the network from 200 to 1,000 qualified professionals, across employees, Ta
 
 ## What's scoped for 2026
 
-Nothing. Every dated Notion source places this track in 2027 and 2028:
+One design item, no build.
+
+| When | Milestone | Status | Source |
+|---|---|---|---|
+| Q4 2026 | Design the marketplace flow: register, qualify, train, quality-check advisors. Design only. Build is scoped for 2027 | In discovery | H2 Initiative List, Strategy alignment |
+
+The register, qualify, and train steps overlap with the TalentOps capabilities. They are tracked here because this is the marketplace enablement and quality layer that lets external firms join. See [ta_platform_talentops_roadmap_2026.md](./ta_platform_talentops_roadmap_2026.md).
+
+Everything else in this track is 2027 and 2028:
 
 - "Evolve TA Network into a Scalable B2B Platform" is tagged Pre-Discovery, and "when it helps: 2027, 2028."
 - "B2C White-Label Partnerships (VLH & TA Network)" is tagged "when it helps: 2027."
 - The concrete 2026-to-2027 delivery plan places the first white-label Kanzleien at Q1 2027, and 1,000 TAs live at EOY 2027.
-
-The only 2026 work that feeds this track is the marketplace design happening under TalentOps in Q4 2026: register, qualify, train, quality-check. That is design, not build. See [ta_platform_talentops_roadmap_2026.md](./ta_platform_talentops_roadmap_2026.md).
 
 ## Open items from the canonical strategy
 
